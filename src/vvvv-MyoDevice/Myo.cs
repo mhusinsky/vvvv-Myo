@@ -20,7 +20,7 @@ namespace VVVV.Nodes
         Name = "Myo", 
         Category = "Devices", 
         AutoEvaluate = true, 
-        Help = "Provides tracking and gesture data of single Myo", 
+        Help = "Provides tracking and gesture data of a single Myo", 
         Tags = "tracking, arm, gesture, EMG", 
         Author = "motzi",
         Credits = "MyoSharp (Nick Cosentino and Tayfun Uzun)",
