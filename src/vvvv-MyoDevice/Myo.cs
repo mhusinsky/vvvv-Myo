@@ -20,11 +20,11 @@ namespace VVVV.Nodes
         Name = "Myo", 
         Category = "Devices", 
         AutoEvaluate = true, 
-        Help = "Provides access to one Myo device using MyoSharp", 
+        Help = "Provides tracking and gesture data of single Myo", 
         Tags = "tracking, arm, gesture, EMG", 
         Author = "motzi",
         Credits = "MyoSharp (Nick Cosentino and Tayfun Uzun)",
-        Bugs = "Can only used with a single Myo device")]
+        Bugs = "Can be used with a single Myo only")]
     #endregion PluginInfo
     public class DevicesMyoNode : IPluginEvaluate, IDisposable, IPartImportsSatisfiedNotification
     {
@@ -126,7 +126,7 @@ namespace VVVV.Nodes
         {
             if (FEnabled.IsChanged)
             {
-                if (FEnabled[0])
+                if (FEnabled[0])  // TODO: adapt for every connected Myo
                 {
                     EnableMyo();
                     _channel.StartListening();
